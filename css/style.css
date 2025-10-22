@@ -555,16 +555,16 @@
   }
   .worksSection {
     position: relative;
+    overflow: hidden;
   }
   .worksSection .workZone {
     position: absolute;
-    left: -60px;
     top: 0;
-    width: 150%;
-    height: 110%;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: 100%;
     transform: rotate(-6deg);
     background-color: rgba(226, 195, 81, 0.2549019608);
-    overflow: hidden;
     z-index: -1;
   }
   .worksSection .works {

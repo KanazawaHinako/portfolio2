@@ -584,26 +584,23 @@ button{
 }
 .worksSection {
   position: relative;
+  overflow: hidden; // ←親に付ける
 
   .workZone {
-    position: absolute; // そのまま
-    left: -60px;
+    position: absolute;
     top: 0;
-    width: 150%;
-    height: 110%;
+    left: -20px;      // 少しだけ出すなら調整
+    width: calc(100% + 40px); // 画面内に収まるサイズに
+    height: 100%;
     transform: rotate(-6deg);
     background-color: #e2c35141;
-
-    // ここで overflow を隠す
-    overflow: hidden;
-
-    // z-index が効く親を意識
     z-index: -1;
   }
 
+
   .works {
-    position: relative; // stacking context を作る
-    z-index: 1;         // 背景より上に表示
+    position: relative; 
+    z-index: 1;         
     display: flex;
     flex-wrap: wrap;
     width: 80%;
