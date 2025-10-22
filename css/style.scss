@@ -554,7 +554,6 @@ button{
 }
 #heart{
     justify-content: space-between;
-    // margin-bottom: 60px;
     position: relative;
     width: 80%;
     margin: 0 auto 100px auto;
@@ -587,24 +586,19 @@ button{
   position: relative;
 
   .workZone {
-    position: absolute; // そのまま
+    position: absolute; 
     left: -60px;
     top: -70px;
     width: 150%;
     height: 120%;
-    transform: rotate(-6deg);
     background-color: #e2c35141;
-
-    // ここで overflow を隠す
     overflow: hidden;
-
-    // z-index が効く親を意識
     z-index: -1;
   }
 
   .works {
-    position: relative; // stacking context を作る
-    z-index: 1;         // 背景より上に表示
+    position: relative; 
+    z-index: 1;         
     display: flex;
     flex-wrap: wrap;
     width: 80%;
