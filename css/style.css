@@ -1,0 +1,765 @@
+@charset "UTF-8";
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+    color: #3D271A;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  button a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E2C351;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  button a .circle {
+    position: relative;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #E2C351;
+    overflow: hidden;
+  }
+  button a .circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #E2C351;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+    opacity: 1;
+  }
+  button a .circle:hover::before {
+    transform: translate(-50%, -50%) scale(5);
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 100px 0 60px 0;
+    position: relative;
+  }
+  .title::before {
+    content: "|";
+    color: #E2C351;
+    padding-right: 20px;
+  }
+  .topContainer {
+    height: 100svh;
+    margin-bottom: 100px;
+  }
+  .topContainer header {
+    width: 85%;
+    margin: 0 auto;
+    height: 220px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  .topContainer header .logo {
+    width: 100px;
+  }
+  .topContainer header p {
+    text-align: center;
+    line-height: 220px;
+  }
+  .topContainer header .headerInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0;
+  }
+  .topContainer header .headerInfo ul li {
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .topContainer header .headerInfo ul li::before {
+    content: "・";
+    color: transparent;
+    padding-right: 6px;
+    transition: color 0.3s ease;
+  }
+  .topContainer header .headerInfo ul li:hover {
+    color: #E2C351;
+  }
+  .topContainer header .headerInfo ul li:hover::before {
+    color: #E2C351;
+  }
+  .topContainer .hero {
+    display: flex;
+    height: calc(100vh - 220px);
+    position: relative;
+  }
+  .topContainer .hero .back {
+    clip-path: polygon(0 0, 70% 0, 50% 100%, 0% 100%);
+    background-color: #E2C351;
+    width: 80%;
+    height: 100%;
+    z-index: 1;
+  }
+  .topContainer .hero .heroImg img {
+    height: calc(100vh - 220px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 0;
+  }
+  .topContainer .hero .heroCon {
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    color: #fff;
+    z-index: 2;
+  }
+  .topContainer .hero .heroCon h1 {
+    font-size: 40px;
+  }
+  .topContainer .hero .heroCon hr {
+    margin: 10px 0;
+  }
+  .topContainer .hero .heroCon p {
+    font-size: 24px;
+  }
+  #heart {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 160px;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+  }
+  #heart .heartCon {
+    z-index: 1000;
+    margin-top: 110px;
+    letter-spacing: 2px;
+  }
+  #heart .heartCon img {
+    width: 500px;
+    height: auto;
+  }
+  #heart .heartCon hr {
+    margin: 40px 0;
+    width: 100px;
+  }
+  #heart .heartCon p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+  #heart img {
+    height: 400px;
+    width: auto;
+  }
+  .worksSection {
+    position: relative;
+  }
+  .worksSection #workTop {
+    display: flex;
+    position: absolute;
+    top: -90px;
+    width: 50%;
+    height: 200px;
+    background-color: #E2C351;
+    clip-path: polygon(0 0, 0% 100%, 100% 60%);
+  }
+  .worksSection .workZone {
+    background-color: rgba(226, 195, 81, 0.2549019608);
+    transform: rotate(-6deg);
+    height: 1000px;
+    width: 150%;
+    position: absolute;
+    left: -60px;
+    top: 0;
+    z-index: -1;
+  }
+  .worksSection .workBot {
+    display: flex;
+    position: absolute;
+    top: 940px;
+    width: 50%;
+    right: 0;
+    height: 200px;
+    background-color: #E2C351;
+    clip-path: polygon(100% 0, 0% 47%, 100% 100%);
+  }
+  .worksSection .title {
+    margin-left: 10%;
+    margin-top: 180px;
+  }
+  .worksSection .works {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    gap: 20px;
+  }
+  .worksSection .works .work {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: center;
+    width: 300px;
+  }
+  .worksSection .works .work img {
+    width: 280px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-bottom: 8px;
+  }
+  .worksSection .works .work:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+  .worksSection .works .work p::before {
+    content: "・";
+    color: #E2C351;
+    padding-right: 4px;
+  }
+  #about {
+    width: 70%;
+    margin: 200px auto 100px;
+    position: relative;
+  }
+  #about .aboutCon {
+    display: flex;
+  }
+  #about .aboutCon .imgBack {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #E2C351;
+  }
+  #about .aboutCon img {
+    position: relative;
+    width: 300px;
+    top: 30px;
+    left: 30px;
+  }
+  #about .aboutCon button {
+    margin-left: 180px;
+    margin-top: 40px;
+  }
+  #about .aboutCon .mosq {
+    margin: 40px 0 0 0;
+    font-size: 10px;
+    line-height: 17px;
+  }
+  #about .aboutCon .name {
+    margin-top: 40px;
+    margin-left: 180px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+  }
+  #about .aboutCon .name span {
+    margin-left: 30px;
+    font-size: 15px;
+  }
+  #about .aboutCon p {
+    font-family: "Montserrat", sans-serif;
+    line-height: 30px;
+    font-size: 14px;
+    margin-left: 180px;
+  }
+  .skillsContainer {
+    background-color: rgba(226, 195, 81, 0.1529411765);
+  }
+  .skillsContainer #skills {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .skillsContainer #skills .skillCon .skill {
+    display: flex;
+    justify-content: space-between;
+  }
+  .skillsContainer #skills .skillCon .skill span h3 {
+    font-size: 24px;
+  }
+  .skillsContainer #skills .skillCon .skill span h3 span {
+    color: #E2C351;
+    margin-right: 10px;
+  }
+  .skillsContainer #skills .skillCon .skill span p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+  .skillsContainer #skills .skillCon .skill img {
+    height: 180px;
+  }
+  .skillsContainer #skills .skillCon .skill:last-child {
+    padding-bottom: 100px;
+  }
+  .skillsContainer #skills .skillCon hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  .license {
+    width: 70%;
+    margin: 10px auto 100px auto;
+    font-size: 14px;
+  }
+  #ContactTitle {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #ContactTitle h2 {
+    margin-left: 230px;
+  }
+  #ContactTitle p {
+    margin-top: 100px;
+    line-height: 30px;
+    font-size: 15px;
+  }
+  .contact {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 250px;
+  }
+  .contact p {
+    display: block;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .contact hr {
+    padding: 10px 0;
+  }
+  .contact form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact form span {
+    display: flex;
+  }
+  .contact form span label {
+    text-align: start;
+    width: 300px;
+  }
+  .contact form span input, .contact form span textarea {
+    background-color: rgba(193, 193, 193, 0.396);
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    text-align: start;
+  }
+  .contact form button {
+    background: #E2C351;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 250px;
+    text-align: center;
+    align-self: flex-end;
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .contact form button:hover {
+    transform: translateY(5px);
+  }
+  footer {
+    position: relative;
+    background-color: #E2C351;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+  }
+  footer svg {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: block;
+  }
+  footer p {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0; /* 念のためリセット */
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    color: #3D271A;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  button a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E2C351;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  button a .circle {
+    position: relative;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #E2C351;
+    overflow: hidden;
+  }
+  button a .circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #E2C351;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+    opacity: 1;
+  }
+  button a .circle:hover::before {
+    transform: translate(-50%, -50%) scale(5);
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 0 0 25px;
+    position: relative;
+  }
+  .title::before {
+    content: "|";
+    color: #E2C351;
+    padding-right: 20px;
+  }
+  .topContainer {
+    height: 100svh;
+    margin-bottom: 150px;
+  }
+  .topContainer header {
+    width: 85%;
+    margin: 0 auto;
+    height: 240px;
+    background: #fff;
+    justify-content: space-between;
+  }
+  .topContainer header .logo {
+    width: 100px;
+  }
+  .topContainer header p {
+    text-align: center;
+    line-height: 240px;
+  }
+  .topContainer header .headerInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 80px 0;
+    display: flex;
+    background-color: #3D271A;
+  }
+  .topContainer header .headerInfo ul li {
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .topContainer header .headerInfo ul li::before {
+    content: "・";
+    color: transparent;
+    padding-right: 6px;
+    transition: color 0.3s ease;
+  }
+  .topContainer header .headerInfo ul li:hover {
+    color: #E2C351;
+  }
+  .topContainer header .headerInfo ul li:hover::before {
+    color: #E2C351;
+  }
+  .topContainer .hero {
+    display: flex;
+    height: calc(100vh - 240px);
+    position: relative;
+  }
+  .topContainer .hero .back {
+    clip-path: polygon(0 0, 50% 0, 20% 100%, 0% 100%);
+    background-color: #E2C351;
+    width: 80%;
+    height: 100%;
+    z-index: 1;
+  }
+  .topContainer .hero .heroImg img {
+    height: calc(100vh - 240px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 0;
+    height: 100%;
+  }
+  .topContainer .hero .heroCon {
+    display: none;
+  }
+  #heart {
+    justify-content: space-between;
+    position: relative;
+    width: 80%;
+    margin: 0 auto 100px auto;
+    height: 500px;
+  }
+  #heart .heartCon {
+    z-index: 1000;
+    margin-top: 110px;
+    letter-spacing: 2px;
+  }
+  #heart .heartCon img {
+    width: 80%;
+    height: auto;
+  }
+  #heart .heartCon hr {
+    margin: 25px 0;
+    width: 100px;
+  }
+  #heart .heartCon p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+  #heart img {
+    height: 200px;
+    width: auto;
+  }
+  .worksSection {
+    position: relative;
+    z-index: 0;
+  }
+  .worksSection .workZone {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 150%;
+    height: 110%;
+    background-color: rgba(226, 195, 81, 0.2549019608);
+    transform: rotate(-6deg);
+    z-index: -1; /* ← ここを追加して背景をワークの下に固定 */
+    overflow-x: hidden; /* ← 横にはみ出るのを防ぐ */
+  }
+  .worksSection .title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .worksSection .works {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    gap: 20px;
+  }
+  .worksSection .works .work {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: center;
+    width: calc(50% - 10px);
+    text-align: center;
+  }
+  .worksSection .works .work img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-bottom: 8px;
+  }
+  .worksSection .works .work:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+  .worksSection .works .work p::before {
+    content: "・";
+    color: #E2C351;
+    padding-right: 4px;
+  }
+  #about {
+    margin: 150px 0 100px 0;
+    position: relative;
+  }
+  #about .aboutCon {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  #about .aboutCon .imgBack {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: #E2C351;
+  }
+  #about .aboutCon img {
+    position: relative;
+    width: 130px;
+    top: 10px;
+    left: 10px;
+  }
+  #about .aboutCon button {
+    margin-top: 40px;
+  }
+  #about .aboutCon .mosq {
+    display: none;
+  }
+  #about .aboutCon .name {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  #about .aboutCon .name span {
+    margin-left: 30px;
+    font-size: 10px;
+  }
+  #about .aboutCon p {
+    font-family: "Montserrat", sans-serif;
+    line-height: 30px;
+    font-size: 14px;
+  }
+  .skillsContainer {
+    background-color: rgba(226, 195, 81, 0.1529411765);
+  }
+  .skillsContainer #skills .title {
+    padding: 50px 0;
+  }
+  .skillsContainer #skills .skillCon {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .skillsContainer #skills .skillCon .skill span h3 {
+    font-size: 24px;
+  }
+  .skillsContainer #skills .skillCon .skill span h3 span {
+    color: #E2C351;
+    margin-right: 10px;
+  }
+  .skillsContainer #skills .skillCon .skill span p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 30px;
+  }
+  .skillsContainer #skills .skillCon .skill img {
+    padding-top: 30px;
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    justify-content: center;
+  }
+  .skillsContainer #skills .skillCon .skill:last-child {
+    padding-bottom: 100px;
+  }
+  .skillsContainer #skills .skillCon hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  .license {
+    margin: 10px auto 100px auto;
+    width: 95%;
+    font-size: 9px;
+  }
+  #ContactTitle p {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 15px;
+  }
+  .contact {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  .contact p {
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .contact hr {
+    margin: 20px 0;
+  }
+  .contact form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact form span {
+    display: flex;
+  }
+  .contact form span label {
+    text-align: start;
+    width: 300px;
+  }
+  .contact form span input, .contact form span textarea {
+    background-color: rgba(193, 193, 193, 0.396);
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    text-align: start;
+  }
+  .contact form button {
+    background: #E2C351;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 250px;
+    align-self: flex-end;
+    transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .contact form button:hover {
+    transform: translateY(5px);
+  }
+  footer {
+    position: relative;
+    background-color: #E2C351;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+  }
+  footer svg {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    display: block;
+  }
+  footer p {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
