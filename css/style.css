@@ -557,42 +557,48 @@
     position: relative;
   }
   .worksSection .workZone {
-    position: absolute;
-    left: -60px;
-    top: -70px;
-    width: 100%;
-    height: 120%;
+    overflow-x: hidden;
     background-color: rgba(226, 195, 81, 0.2549019608);
-    overflow: hidden;
+    transform: none;
+    height: 110%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     z-index: -1;
   }
+  .worksSection .title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
   .worksSection .works {
-    position: relative;
-    z-index: 1;
+    margin: 0 auto;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 30px;
+    font-size: 10px;
     gap: 20px;
   }
   .worksSection .works .work {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: center;
     width: calc(50% - 10px);
-    transition: transform 0.4s ease;
     text-align: center;
-  }
-  .worksSection .works .work p {
-    font-size: 13px;
-    padding-top: 10px;
   }
   .worksSection .works .work img {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    margin-bottom: 8px;
   }
   .worksSection .works .work:hover {
     transform: scale(1.1);
     z-index: 10;
+  }
+  .worksSection .works .work p::before {
+    content: "・";
+    color: #E2C351;
+    padding-right: 4px;
   }
   #about {
     margin: 150px 0 100px 0;
