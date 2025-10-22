@@ -581,36 +581,45 @@ button{
         height: 200px;
         width: auto;
     }
+
 }
 .worksSection {
   position: relative;
-  overflow: hidden; // ←親に付ける
 
   .workZone {
-    position: absolute;
-    top: 0;
-    left: -20px;      // 少しだけ出すなら調整
-    width: calc(100% + 40px); // 画面内に収まるサイズに
-    height: 100%;
+    position: absolute; // そのまま
+    left: -60px;
+    top: -70px;
+    width: 150%;
+    height: 120%;
     transform: rotate(-6deg);
     background-color: #e2c35141;
+
+    // ここで overflow を隠す
+    overflow: hidden;
+
+    // z-index が効く親を意識
     z-index: -1;
   }
 
-
   .works {
-    position: relative; 
-    z-index: 1;         
+    position: relative; // stacking context を作る
+    z-index: 1;         // 背景より上に表示
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
+    margin-top: 30px;
     gap: 20px;
 
     .work {
       width: calc(50% - 10px);
       transition: transform 0.4s ease;
       text-align: center;
+      p{
+        font-size: 13px;
+        padding-top: 10px;
+      }
       img {
         width: 100%;
         object-fit: cover;
