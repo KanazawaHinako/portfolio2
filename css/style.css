@@ -6,9 +6,6 @@
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
   }
-  html {
-    scroll-behavior: smooth;
-  }
   button a {
     padding-bottom: 10px;
     border-bottom: 1px solid #E2C351;
@@ -408,9 +405,6 @@
     overflow-x: hidden;
     width: 100%;
   }
-  html {
-    scroll-behavior: auto;
-  }
   button a {
     padding-bottom: 10px;
     border-bottom: 1px solid #E2C351;
@@ -475,22 +469,21 @@
     line-height: 240px;
   }
   .topContainer header .headerInfo ul {
+    position: relative;
+    top: -150px;
     list-style: none;
     padding: 0;
-    margin: 80px 0;
+    margin: 80px auto;
     display: flex;
-    background-color: #3D271A;
+    justify-content: space-between;
   }
   .topContainer header .headerInfo ul li {
-    margin: 10px 0;
+    margin: 10px 5px;
     position: relative;
     cursor: pointer;
     transition: color 0.3s ease;
   }
   .topContainer header .headerInfo ul li::before {
-    content: "・";
-    color: transparent;
-    padding-right: 6px;
     transition: color 0.3s ease;
   }
   .topContainer header .headerInfo ul li:hover {
@@ -525,7 +518,10 @@
     display: none;
   }
   #heart {
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 80%;
     margin: 0 auto 100px auto;
@@ -535,14 +531,15 @@
     z-index: 1000;
     margin-top: 110px;
     letter-spacing: 2px;
+    text-align: center;
   }
   #heart .heartCon img {
     width: 80%;
     height: auto;
   }
   #heart .heartCon hr {
-    margin: 25px 0;
-    width: 100px;
+    margin: 25px auto;
+    width: 80%;
   }
   #heart .heartCon p {
     font-size: 15px;
@@ -552,6 +549,8 @@
   #heart img {
     height: 200px;
     width: auto;
+    display: block;
+    margin: 0 auto;
   }
   .worksSection {
     position: relative;

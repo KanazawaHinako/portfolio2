@@ -8,12 +8,3 @@ images.forEach(img => {
 let triggered = false;
 const heart = document.querySelector('.heart');
 
-window.addEventListener('scroll', () => {
-  if (triggered) return; // 一度だけ発動
-
-const rect = heart.getBoundingClientRect();
-  if (rect.top < window.innerHeight * 0.9) { // 少しスクロールしたら
-    heart.scrollIntoView({ behavior: 'smooth' });
-    triggered = true;
-}
-});
